@@ -5,14 +5,15 @@ namespace WC3MapDeprotector
 {
     public class StormLibrary
     {
-        private const string STORMLIB = "StormLib.dll";
+        private const string RUNTIME_DEPENDENCIES_FOLDER = "RuntimeDependencies";
+        private const string STORMLIB = RUNTIME_DEPENDENCIES_FOLDER + "\\StormLib.dll";
 
         static StormLibrary()
         {
             string directoryName = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
             if (!File.Exists(Path.Combine(directoryName, STORMLIB)))
             {
-                File.Copy(Path.Combine(directoryName, Environment.Is64BitProcess ? "StormLib_x64.dll" : "StormLib_x86.dll"), Path.Combine(directoryName, STORMLIB), false);
+                File.Copy(Path.Combine(directoryName, RUNTIME_DEPENDENCIES_FOLDER, Environment.Is64BitProcess ? "StormLib_x64.dll" : "StormLib_x86.dll"), Path.Combine(directoryName, STORMLIB), false);
             }
         }
 

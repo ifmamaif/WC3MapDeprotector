@@ -65,19 +65,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="BaseMapFiles.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="BaseMapFiles_2.0.0.22389.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="BlankMapFiles_2.0.0.22389.zip">
+    <None Update="RuntimeDependencies\BlankMapFiles_2.0.0.22389.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Blizzard.j">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ce-lib64.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="common.j">
@@ -86,7 +77,7 @@
     <None Update="Disclaimer.rtf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="GameDataFiles_2.0.0.22389.zip">
+    <None Update="RuntimeDependencies\GameDataFiles_2.0.0.22389.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="GameVersionCompatability.rtf">
@@ -95,23 +86,23 @@
     <None Update="Help.rtf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="listfile.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ObjectDataCollectionFiles_2.0.0.22389.zip">
+    <None Update="RuntimeDependencies\listfile.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Update="SilkObjectOptimizer.zip">
+    <None Update="RuntimeDependencies\FastMDX.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StormLib_x64.dll">
+    <None Update="RuntimeDependencies\MdxLib.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StormLib_x86.dll">
+    <None Update="RuntimeDependencies\StormLib_x64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="RuntimeDependencies\StormLib_x86.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -140,13 +131,13 @@
       <HintPath>..\External\War3Net\Binaries\DotNetZip.dll</HintPath>
     </Reference>
     <Reference Include="FastMDX">
-      <HintPath>FastMDX.dll</HintPath>
+      <HintPath>RuntimeDependencies\FastMDX.dll</HintPath>
     </Reference>
     <Reference Include="Jass2Lua">
       <HintPath>..\External\Jass2Lua\Jass2Lua.dll</HintPath>
     </Reference>
     <Reference Include="MdxLib">
-      <HintPath>MdxLib.dll</HintPath>
+      <HintPath>RuntimeDependencies\MdxLib.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeAnalysis">
       <HintPath>..\External\War3Net\Binaries\Microsoft.CodeAnalysis.dll</HintPath>

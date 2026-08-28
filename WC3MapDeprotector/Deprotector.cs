@@ -120,6 +120,14 @@ namespace WC3MapDeprotector
             }
         }
 
+        protected static string RuntimeDependenciesPath
+        {
+            get
+            {
+                return Path.Combine(Utils.ExeFolderPath, "RuntimeDependencies");
+            }
+        }
+
         protected static string GameDataFilesPath
         {
             get
@@ -133,7 +141,7 @@ namespace WC3MapDeprotector
             get
             {
 
-                return Path.Combine(Utils.ExeFolderPath, "listfile.zip");
+                return Path.Combine(RuntimeDependenciesPath, "listfile.zip");
             }
         }
 
@@ -420,13 +428,13 @@ namespace WC3MapDeprotector
 
             _deprotectionResult.WarningMessages.Add($"NOTE: This tool is a work in progress. Deprotection does not work perfectly on every map. You will need to make fixes manually. Click the \"Help\" button for instructions. You can also get help from my YouTube channel or report defects by clicking the \"Bug Report\" button.");
 
-            var blankMapFilesZip = Path.Combine(Utils.ExeFolderPath, "BlankMapFiles_2.0.0.22389.zip");
+            var blankMapFilesZip = Path.Combine(RuntimeDependenciesPath, "BlankMapFiles_2.0.0.22389.zip");
             if (!Directory.Exists(BlankMapFilesPath) && File.Exists(blankMapFilesZip))
             {
                 ZipFile.ExtractToDirectory(blankMapFilesZip, BlankMapFilesPath, true);
             }
 
-            var gameDataFilesZip = Path.Combine(Utils.ExeFolderPath, "GameDataFiles_2.0.0.22389.zip");
+            var gameDataFilesZip = Path.Combine(RuntimeDependenciesPath, "GameDataFiles_2.0.0.22389.zip");
             if (!Directory.Exists(GameDataFilesPath) && File.Exists(gameDataFilesZip))
             {
                 ZipFile.ExtractToDirectory(gameDataFilesZip, GameDataFilesPath, true);

@@ -134,7 +134,8 @@ Proprietăți importante ale proiectului:
 
 Resursele necesare build-ului și rulării sunt copiate în output, printre care:
 
-- `StormLib_x64.dll` și `StormLib_x86.dll`;
+- DLL-urile locale de runtime (`FastMDX.dll`, `MdxLib.dll`, `StormLib_x64.dll` și `StormLib_x86.dll`);
+- arhivele runtime din `RuntimeDependencies\`;
 - `Blizzard.j` și `common.j`;
 - arhivele cu date de bază Warcraft III;
 - `listfile.zip`;
@@ -368,6 +369,8 @@ Listfile-ul global este stocat în:
 ```text
 %APPDATA%\WC3MapDeprotector\listfile.txt
 ```
+
+Arhivele runtime originale sunt păstrate în `WC3MapDeprotector\RuntimeDependencies\` și sunt copiate în `RuntimeDependencies\` lângă executabil la build. Programul caută acolo `BlankMapFiles_2.0.0.22389.zip`, `GameDataFiles_2.0.0.22389.zip` și `listfile.zip`.
 
 În mod normal, fișierele temporare sunt șterse la începutul unei procesări noi. În caz de avertismente sau erori, calea către folderul de lucru poate fi afișată în log.
 
